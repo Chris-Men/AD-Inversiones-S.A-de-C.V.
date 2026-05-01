@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="style/catalogo.css" />
     <link rel="stylesheet" href="style/home.css" />
     <link rel="stylesheet" href="style/styleWA.css" />
+    <link rel="stylesheet" href="style/uni.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -207,6 +208,14 @@
       $(document).ready(function () {
         $("#whatsappContainer").load("components/whatsapp-button.html");
       });
+    </script>
+    <div id="chat-component"></div>
+    <script>
+      fetch("uni.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("chat-component").innerHTML = html;
+        });
     </script>
   </body>
 </html>
